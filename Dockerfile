@@ -10,4 +10,5 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 COPY --from=builder /app/app ./
 EXPOSE 8080
+USER 10024
 CMD ["./app"]
